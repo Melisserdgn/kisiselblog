@@ -1,0 +1,175 @@
+div.container1{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+     justify-content: center;
+}
+button.btn1{
+    width: 120px; 
+    height: 100px;
+    border-radius: 30px;
+    background-color:rgb(0, 0, 0);
+    text-align: center;
+    margin:15px;
+    color:white;
+}
+.img1{
+width: 120px;
+float: left;
+display:flex ;
+height: 120px;
+margin-right:280px;
+}
+.aa{
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    font-size:40px;
+    margin: -5px;
+}
+.foto{
+    width: 450px;
+    height: 380px;
+    border: 6px solid black;
+    float: left;
+    margin-left: 35px;
+    background-image: #fff,
+}
+.yazi{
+    text-align: center;
+    font-size:18px;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+}
+.column{
+    flex-direction: row;
+    display: flex;
+    margin: 40px;
+    gap:40px;
+}
+.btn2{
+    width: 150px;
+    height: 60px;
+    border-radius: 50px;
+    background-color: rgb(255, 255, 255);
+    border: 3px solid rgb(79, 124, 215);
+}
+.btn3{
+    width: 150px;
+    height: 60px;
+    border-radius: 50px;
+    background-color: rgb(79, 124, 215);
+    border:none;
+}
+.progres{
+    width: 100%;
+    height: 400px;
+    flex-direction: row;
+    display: flex;
+    gap:30px;
+    justify-content: center;
+}
+.fonts{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 40px;
+    font-weight: bold;
+    flex-direction: column;
+    margin-bottom:80px;
+}
+
+@keyframes progress {
+    0% {
+      --percentage: 0;
+    }
+    100% {
+      --percentage: var(--value);
+    }
+  }
+  
+  @property --percentage {
+    syntax: "<number>";
+    inherits: true;
+    initial-value: 0;
+  }
+  
+  [role="progressbar"] {
+    --percentage: var(--value);
+    --primary: #369;
+    --secondary: #adf;
+    --size: 150px;
+    animation: progress 2s 0.5s forwards;
+    width: var(--size);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+  }
+  
+  [role="progressbar"]::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(
+      var(--primary) calc(var(--percentage) * 1%),
+      var(--secondary) 0
+    );
+    mask: radial-gradient(white 55%, transparent 0);
+    mask-mode: alpha;
+    -webkit-mask: radial-gradient(#0000 55%, #000 0);
+    -webkit-mask-mode: alpha;
+  }
+  
+  [role="progressbar"]::after {
+    counter-reset: percentage var(--value);
+    content: counter(percentage) "%";
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: calc(var(--size) / 5);
+    color: var(--primary);
+  }
+  
+.cont1 p{
+    color: black;
+    font-weight: bold;
+    justify-content: center;
+    display: flex;
+}
+body{
+    background-image: #fff;
+}
+h2{
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.sertifika{
+    flex-direction: column;
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+}
+.sertifika img{
+    width: 350px;
+    height: 160px;
+}
+.sertifika2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:60px;
+}
